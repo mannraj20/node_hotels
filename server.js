@@ -17,7 +17,8 @@ app.use(bodyParser.json());
 app.use(logRequest);*/
 
 passport.use(new LocalStrategy(async(USERNAME,password,done)=>{
-    try{console.log =("recieved credentials",USERNAME,password);
+    try{
+        //console.log =("recieved credentials",USERNAME,password);
 const user =await Person.find({username:USERNAME});
 if(!user)
 return done(null,false,{msg:"incorrect username"});
