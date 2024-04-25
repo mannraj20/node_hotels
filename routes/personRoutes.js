@@ -2,9 +2,7 @@ const express = require("express");
 const router =express.Router();
 const Person =require("./../model/person")
 
-/*router.get("/",function(req,res){
-    res.send("welcome to hotel")
-})*/
+
 
 router.post("/",async(req,res)=>{
     try{
